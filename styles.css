@@ -1,17 +1,21 @@
-/* Fancy headline font
-
-@font-face {
-  font-family: "Workbench Web";
-  src: url("fonts/Workbench[wdth,wght].woff2") format("woff2");
+:root {
+  --text: #333;
+  --headline-text: #1B3240;
+  --dark-neutral: #3E5563;
+  --light-neutral: #F2E4F2;
+  --background: #FFF;
+  --dark-accent:    #8C5D8C;
+  --light-accent:   #8C5D8C;
 }
-h1,
-h2 {
-  font-family: "Workbench Web";
-}*/
+
 
 @font-face {
   font-family: "Manrope";
   src: url("fonts/ManropeGX.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("fonts/LibreBaskerville-Italic.ttf") format("truetype");
 }
 html {
   font-size: 16px;
@@ -21,15 +25,11 @@ body {
   font-size: 1rem;
   margin: 0;
   padding: 0;
+  color: var(--text);
+  background-color: var(--background);
 }
 
 /*** TYPOGRAPHIC SCALE BEGIN ***/
-
-h1, h2, h3, h4, h5 {
-  margin: 0 0 0.707em 0;
-  line-height: 1.15;
-  font-weight: 500;
-}
 
 h1 {font-size: 5.653em;}
 
@@ -37,7 +37,7 @@ h2 {font-size: 3.998em;}
 
 h3 {font-size: 1.999em;}
 
-h4 {font-size: 1.999em;}
+h4 {font-size: 1.414em;}
 
 h5 {font-size: 1.414em;}
 
@@ -47,18 +47,36 @@ small, .text_small {font-size: 0.707em;}
 
 /*** TYPOGRAPHIC SCALE END ***/
 
+h1, h2, h3 {
+  margin: 0 0 0.707em 0;
+  line-height: 1.15;
+  font-weight: 500;
+  color: var(--headline-text);
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+h4 {
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--text);
+}
 /*** LAYOUT STYLES BEGIN ***/
 
 main {
-  max-width: 90%;
+  max-width: 1200px;
   padding: 0 2rem 2rem 2rem;
+  margin: 0 auto;
 }
 section {
   margin: 2.827rem 0;
 }
 .two-columns {
   display: grid;
-  grid-gap: 1.5rem;
+  grid-gap: 2rem;
 }
 
 @media (min-width: 600px) {
@@ -69,19 +87,6 @@ section {
   .two-columns h2 { grid-column: 1/3; }
 
   .about .two-columns p { justify-self: start; }
-
-  .head .title {
-    grid-column: 1/3;
-  }
-
-  .head p:nth-of-type(2) {
-    text-align: right;
-    width: 100%;
-  }
-  .head p:nth-of-type(3) {
-    text-align: left;
-    width: 100%;
-  }
 
   .experience div:nth-of-type(2) {
     grid-row: 2/4;
@@ -96,43 +101,59 @@ p {
   line-height: 1.6;
 }
 header {
-  background-color: papayawhip;
-  padding: 4rem 2rem;
-  border-bottom: 1px solid peachpuff;
+  background-color: var(--light-neutral);
+  border-bottom: 1px solid var(--dark-accent);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
 }
 header h1 {
   text-align: center;
 }
 .head {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-.head p {
-  max-width: 100%;
+  align-items: center;
+
 }
 .title {
-  letter-spacing: 0.08em;
-  font-weight: 550;
-  text-transform: uppercase;
-  opacity: 0.7;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.999rem;
+  font-style: italic;
   margin: 0;
+  opacity: 0.8;
+  padding-bottom: 0.5em;
+  text-align: center;
+  color: var(--headline-text);
 }
-.head .title {
+.head a {
+  display: inline-block;
+  padding: 0.5em 1em;
   text-align: center;
 }
-.head .title::before {
-  content: "\1F449";
-  padding-right: 0.5em;
-}
-.head .title::after {
-  content: "\1F448";
-  padding-left: 0.5em;
+
+.date {
+  letter-spacing: 0.08em;
+  font-weight: 550;
+  font-variant-caps: small-caps;
+  opacity: 0.8;
+  margin: 0;
+  padding-bottom: 0.25em;
 }
 
 .about p {
-  font-size: 2.3vmax;
+  font-size: 1.15rem;
   max-width: 100%;
 }
 
+@media (min-width: 600px) {
+  .about p {
+    font-size: 2.3vmax;
+  }
+}
 @media (min-width: 950px) {
   .about p {
     font-size: 1.375rem;
@@ -143,19 +164,44 @@ header h1 {
 a,
 a:visited,
 a:active {
-  color: green;
+  background-color: transparent;
+  color: var(--light-accent);
+  transition: all 300ms ease;
+  border-radius: 2px;
 }
-
-a.github {
-  justify-self: end;
+a:hover {
+  color: var(--background);
+  background-color: var(--dark-accent);
+  transition: all 300ms ease;
 }
-a.github:before {
+a.github::before {
   content: "\1F419";
   margin-right: 0.5em;
 }
-a.linkedin:before {
+a.linkedin::before {
   content: "\1F454";
   margin-right: 0.5em;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+a.linkedin::before:hover {
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 abbr {
@@ -187,10 +233,23 @@ ul {
 }
 ul li {
   line-height: 1.7;
-  padding-left: .5em;
+  padding-left: .5rem;
 }
 ul.skills {
   list-style: fire;
+  padding-left: 0;
+}
+ul.skills li {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr;
+  padding-left: 0;
+}
+ul.skills li::before {
+  content: "\1F525";
+  text-align: center;
+}
+ul.skills li em {
+  padding-left: 0.5rem;
 }
 ul.tech {
   list-style: robot;
@@ -198,8 +257,12 @@ ul.tech {
 ul.education {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 ul.education li:first-of-type {
   font-size: 1.414rem;
   font-weight: 450;
+}
+ul.education li span {
+  padding-right: 0.5rem;
 }
