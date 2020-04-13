@@ -3,122 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <title>Marius Bugge Monsen</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <section>
-    <h1>Marius Bugge Monsen</h1>
-    <div>
-      <p>Experienced Senior Software Engineer</p>
-      <p><a href="https://github.com/mariusbu">Github</a></p>
-      <p><a href="https://www.linkedin.com/in/mariusb1/">Linkedin</a></p>
-    </div>
+<header>
+  <h1>Marius Bugge Monsen</h1>
+  <div class="head two-columns">
+    <p class="title">Grumpy Old Software Engineer</p>
+    <p><a href="https://github.com/mariusbu" class="github">Github</a></p>
+    <p><a href="https://www.linkedin.com/in/mariusb1/" class="linkedin">Linkedin</a></p>
+  </div>
+</header>
+<main>
+  <section class="about">
     <h2>About Me</h2>
-    <div>
+    <div class="two-columns">
       <p>I’m a software engineer with 18 years of professional experience. Having worked for Trolltech, Nokia and later co-founded a company, I have been able to work in both very large and very small organisations, contributing to products that were being used by millions of people.</p>
       <p>One of the most important things this has taught me is to be aware of how software engineering and product development fits within the larger scope of the organisation and the problems we are solving for our users.</p>
       <p>I enjoy diving into new technologies, codebases and domains. Running a small company has taught me that being outside your comfort-zone is how you learn and grow.</p>
       <p>I believe that culture trumps strategy, and that a team of people that trust and support each other can conquer any problem.</p>
     </div>
   </section>
-  <main>
-  <h2>Work Experience</h2>
-  <section>
-    <h3>2010 – present Cutehacks AS</h3>
-    <h4>Co-founder, Senior Software Engineer</h4>
-    <p>Started a small software consultancy company with a friend, focusing on helping startups with product development. Being only 5 people in the company, we had to do everything ourselves; including marketing, sales, accounting, managing employees and running customer projects.</p>
-  </section>
-  <section>
-    <h3>2008 – 2010 Nokia</h3>
-    <h4>Senior Software Engineer, Team Lead</h4>
-    <p>Developing the Qt C++ application framework, leading the Qt Widgets team (consisting of up to 14 developers) with the responsibility for developing and maintaining all Qt widgets.</p>
-    <p>As a team lead, I was responsible for managing and mentoring, as well as being part of the recruitment process of new developers.</p>
-    <p>I was also leading the Qt Declarative R&D project - a precursor to the Qml declarative UI language and framework taking a very similar approach to React.</p>
-  </section>
-  <section>
-    <h3>2002 – 2008 Trolltech ASA</h3>
-    <h4>Software Engineer, later Senior Software Engineer</h4>
-    <p>Developing the Qt C++ application framework, being the main developer of the Qt ItemViews MVC framework. This included API design, architecture, implementation and ongoing maintenance and development.</p>
-  </section>
-  <section>
-    <h2>Relevant Projects</h2>
+  <section class="two-columns experience">
+    <h2>Work Experience</h2>
     <div>
-      <h3>qpm.io (Aug. 2015 - )</h3>
-        <h4>A package manager and dependency tracker for the Qt C++ framework</h4>
-        <p>From our experience with other development platforms, we saw a need for a Qt package manager, so we built one. Qpm is in active use, with 150 packages and thousands of downloads so far this year.</p>
-        <ul>
-          <li>Backend development (Golang, PostgreSQL)</li>
-          <li>Command-line client development (Golang)</li>
-          <li>Infrastructure / Ops (Docker, DockerHub, DigitalOcean, Google Cloud Storage, CloudFlare, ElephantSQL)</li>
-          <li>Static website (HTML/CSS)</li>
-        </ul>
-      </div>
-      <div>
-        <h3>VIBBIO AS (Feb. 2020)</h3>
-        <h4>Video creation SaaS</h4>
-        <p>I was brought in to help because of my experience with both Docker and C/C++.</p>
-        <ul>
-          <li>Dockerised video composition pipeline</li>
-        </ul>
-      </div>
-      <div>
-        <h3>reMarkable (Feb. 2017 - Nov/Dec. 2019)</h3>
-        <h4>Digital notepad and e-reader</h4>
-        <p>I was brought in as the third developer to work on the device software and associated desktop and mobile clients. In addition I helped build the development team and put in place processes.</p>
-        <ul>
-          <li>Embedded, mobile and desktop client development (Qt/Qml C++/JS)</li>
-          <li>Data synchronisation protocol design, prototyping and implementation</li>
-          <li>Recruitment (technical interviews)</li>
-          <li>Setting up cross-functional, vertical teams consisting of product management, design, QA and software development</li>
-          <li>Designing and implementing development processes (“pragmatic agile”) from scratch</li>
-          <li>Took initiative and executed dockerisation of the embedded development tool-chain to streamline development and testing on the device (Docker, Google Container Registry, Google Cloud Build)</li>
-          <li>Writing unit-tests for both new and existing code (Google Test)</li>
-          <li>Introducing Behaviour Driven GUI Testing to support QA (Squish, Gherkin and Python)</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Conclude (Oct. 2014- Jan. 2017)</h3>
-        <h4>Workflow builder deeply integrated with Slack</h4>
-        <p>I was one of two developers brought in to be the technical team in a new startup. We helped prototype and build the product, going through the product discovery phase, including several changes and pivots. I built the mobile clients and the initial version of the web-app. I also took over the back-end development towards the end of the project.</p>
-        <ul>
-          <li>Product discovery and development</li>
-          <li>Natural language parsing</li>
-          <li>Backend development (Golang, Google AppEngine, Google Storage)</li>
-          <li>Frontend development (React, Webpack, Babel, Npm, ES6)</li>
-          <li>Introduced Pirate-metrics to the product-team          </li>
-        </ul>
-      </div>
-      <div>
-        <h3>Stay.com for Android and iOS (2012-2014)</h3>
-        <h4>Social travel guides SaaS and mobile app</h4>
-        <p>We were two developers brought in to develop the Android mobile app, and eventually I took over the development of the iOS app. We worked in a cross-functional team with product-manager, UX-designer and developers.</p>
-        <ul>
-          <li>Android mobile app (Java)</li>
-          <li>iOS mobile app (ObjectiveC)</li>
-          <li>Releases to both app stores</li>
-        </ul>
-      </div>
+      <h3>2010 – present Cutehacks AS</h3>
+      <strong>Co-founder, Senior Software Engineer</strong>
+      <p>Started a small software consultancy company with a friend, focusing on helping startups with product development. Being only 5 people in the company, we had to do everything ourselves; including marketing, sales, accounting, managing employees and running customer projects.</p>
+    </div>
+    <div>
+      <h3>2008 – 2010 Nokia</h3>
+      <strong>Senior Software Engineer, Team Lead</strong>
+      <p>Developing the Qt C++ application framework, leading the Qt Widgets team (consisting of up to 14 developers) with the responsibility for developing and maintaining all Qt widgets.</p>
+      <p>As a team lead, I was responsible for managing and mentoring, as well as being part of the recruitment process of new developers.</p>
+      <p>I was also leading the Qt Declarative R&D project - a precursor to the Qml declarative UI language and framework taking a very similar approach to React.</p>
+    </div>
+    <div>
+      <h3>2002 – 2008 Trolltech ASA</h3>
+      <strong>Software Engineer, later Senior Software Engineer</strong>
+      <p>Developing the Qt C++ application framework, being the main developer of the Qt ItemViews MVC framework. This included API design, architecture, implementation and ongoing maintenance and development.</p>
+    </div>
   </section>
-  <section>
+  <section class="two-columns">
+    <h2>Projects</h2>
+    <div>
+      <h3>qpm.io</h3>
+      <strong>A package manager and dependency tracker for the Qt C++ framework</strong>
+      <p class="title">Aug. 2015 &ndash; present</p>
+      <p>From our experience with other development platforms, we saw a need for a Qt package manager, so we built one. Qpm is in active use, with 150 packages and thousands of downloads so far this year.</p>
+      <ul>
+        <li>Backend development (Golang, PostgreSQL)</li>
+        <li>Command-line client development (Golang)</li>
+        <li>Infrastructure / Ops (Docker, DockerHub, DigitalOcean, Google Cloud Storage, CloudFlare, ElephantSQL)</li>
+        <li>Static website (HTML/CSS)</li>
+      </ul>
+    </div>
+    <div>
+      <h3>VIBBIO AS</h3>
+      <strong>Video creation SaaS</strong>
+      <p class="title">Feb. 2020</p>
+      <p>I was brought in to help because of my experience with both Docker and C/C++.</p>
+      <ul>
+        <li>Dockerised video composition pipeline</li>
+      </ul>
+    </div>
+    <div>
+      <h3>reMarkable</h3>
+      <strong>Digital notepad and e-reader</strong>
+      <p class="title">Feb. 2017 &ndash; Dec. 2019</p>
+      <p>I was brought in as the third developer to work on the device software and associated desktop and mobile clients. In addition I helped build the development team and put in place processes.</p>
+      <ul>
+        <li>Embedded, mobile and desktop client development (Qt/Qml C++/JS)</li>
+        <li>Data synchronisation protocol design, prototyping and implementation</li>
+        <li>Recruitment (technical interviews)</li>
+        <li>Setting up cross-functional, vertical teams consisting of product management, design, QA and software development</li>
+        <li>Designing and implementing development processes (“pragmatic agile”) from scratch</li>
+        <li>Took initiative and executed dockerisation of the embedded development tool-chain to streamline development and testing on the device (Docker, Google Container Registry, Google Cloud Build)</li>
+        <li>Writing unit-tests for both new and existing code (Google Test)</li>
+        <li>Introducing Behaviour Driven GUI Testing to support QA (Squish, Gherkin and Python)</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Conclude</h3>
+      <strong>Workflow builder deeply integrated with Slack</strong>
+      <p class="title">Oct. 2014 &ndash; Jan. 2017</p>
+      <p>I was one of two developers brought in to be the technical team in a new startup. We helped prototype and build the product, going through the product discovery phase, including several changes and pivots. I built the mobile clients and the initial version of the web-app. I also took over the back-end development towards the end of the project.</p>
+      <ul>
+        <li>Product discovery and development</li>
+        <li>Natural language parsing</li>
+        <li>Backend development (Golang, Google AppEngine, Google Storage)</li>
+        <li>Frontend development (React, Webpack, Babel, Npm, ES6)</li>
+        <li>Introduced Pirate-metrics to the product-team          </li>
+      </ul>
+    </div>
+    <div>
+      <h3>Stay.com for Android and iOS</h3>
+      <strong>Social travel guides SaaS and mobile app</strong>
+      <p class="title">2012 &ndash; 2014</p>
+      <p>We were two developers brought in to develop the Android mobile app, and eventually I took over the development of the iOS app. We worked in a cross-functional team with product-manager, UX-designer and developers.</p>
+      <ul>
+        <li>Android mobile app (Java)</li>
+        <li>iOS mobile app (ObjectiveC)</li>
+        <li>Releases to both app stores</li>
+      </ul>
+    </div>
+  </section>
+  <section class="two-columns">
     <h2>Education</h2>
-    <ul>
+    <ul class="education">
       <li>1999 – 2002</li>
       <li>Norwegian University of Science and Technology (NTNU) </li>
       <li>MSc Computer Science</li>
     </ul>
-    <ul>
+    <ul class="education">
       <li>1995 – 1998</li>
       <li>Western Norway University of Applied Sciences</li>
       <li>BSc Computer Science</li>
     </ul>
   </section>
-  </main>
-  <section>
+  <section class="two-columns">
     <h2>Skills</h2>
     <div>
-      <h3>Relevant Programming Languages</h3>
-      <ul>
+      <h3>Programming Languages</h3>
+      <ul class="skills">
         <li>C/C++ <span>expert level</span></li>
         <li>Golang <span>proficient</span></li>
         <li>JavaScript <span>proficient</span></li>
@@ -129,8 +137,8 @@
       </ul>
     </div>
     <div>
-      <h3>Relevant Technologies and Services</h3>
-      <ul>
+      <h3>Technologies and Services</h3>
+      <ul class="tech">
         <li>React</li>
         <li>Docker</li>
         <li>DockerHub</li>
@@ -148,6 +156,8 @@
       </ul>
     </div>
   </section>
+
+</main>
 
 </body>
 </html>
