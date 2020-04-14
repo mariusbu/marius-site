@@ -34,7 +34,7 @@ body {
 
 h1 {font-size: 5.653em;}
 
-h2 {font-size: 3.998em;}
+h2 {font-size: 2.827em;}
 
 h3 {font-size: 1.999em;}
 
@@ -76,13 +76,15 @@ section {
   margin: 2.827rem 0;
 }
 .two-columns {
+    display: grid;
+    grid-gap: 2rem;
 }
 
 @media only screen and (min-width: 750px) {
 
+  h2 {font-size: 3.998em;}
+
   .two-columns {
-    display: grid;
-    grid-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
     justify-content: start;
   }
@@ -110,6 +112,7 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 50vh;
+  padding: 2rem 1rem;
 }
 header h1 {
   text-align: center;
