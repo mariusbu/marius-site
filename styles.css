@@ -175,50 +175,28 @@ a.linkedin::before {
   text-decoration: none;
 }
 
-@counter-style point-right {
-  system: cyclic;
-  symbols: "\1F449";
-  suffix: " ";
-  speak-as: bullets;
-}
-@counter-style fire {
-  system: cyclic;
-  symbols: "\1F525";
-  suffix: " ";
-  speak-as: bullets;
-}
-@counter-style robot {
-  system: cyclic;
-  symbols: "\1F916";
-  suffix: " ";
-  speak-as: bullets;
-}
-ul {
-  list-style: point-right;
-}
 ul li {
   line-height: 1.7;
   padding-left: .5rem;
 }
-ul.skills {
-  list-style: fire;
-  padding-left: 0;
+ul:not(.education) li {
+  max-width: 26em;
+}
+
+ul.skills,
+ul.tech {
+  padding-inline-start: 0;
+  list-style-type: none;
 }
 ul.skills li {
   display: grid;
-  grid-template-columns: 40px 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   padding-left: 0;
-}
-ul.skills li::before {
-  content: "\1F525";
-  text-align: center;
 }
 ul.skills li em {
   padding-left: 0.5rem;
 }
-ul.tech {
-  list-style: robot;
-}
+
 ul.education {
   list-style: none;
   padding-left: 0;
