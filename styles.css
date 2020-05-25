@@ -125,12 +125,11 @@ header h1 {
 }
 
 .date {
-  letter-spacing: 0.08em;
-  font-weight: 550;
-  font-variant-caps: small-caps;
+  font-weight: 500;
+  font-size: 0.9rem;
   opacity: 0.8;
   margin: 0;
-  padding-bottom: 0.25em;
+  padding: 0.25em 0;
 }
 
 .about p {
